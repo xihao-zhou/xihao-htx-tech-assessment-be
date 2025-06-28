@@ -60,9 +60,9 @@ Ensure you have the following installed:
 ```plaintext
 xihao-htx-tech-assessment-be/
 ├── app/        
-│   └──          
+│   └──main.py          
 ├── tests/
-│   └── 
+│   └──test.py 
 ├── requirements.txt
 └── README.md
 ```
