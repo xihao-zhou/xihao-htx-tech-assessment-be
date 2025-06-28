@@ -11,14 +11,27 @@ def main():
         if choice == "1":
             print("\nPalindrome Check\n")
             s = input("Please enter a string: ")
-            # print((s + " is a palindrome.") ) if palindrome_check(s) else print(s + " is a not a palindrome.")
-            print((s + " is a palindrome.") if palindrome_check(s) else (s + " is a not a palindrome."))
-            print("\n")
+            
+            if 1 > len(s) or len(s) > 2000:
+                print("You have entered an invalid input, ensure that input length is at lease 1 character and no longer then 2000 characters.\n")
+            else:
+                print((f"{s} is a palindrome.") if palindrome_check(s) else (f"{s} is a not a palindrome."))
+                print("\n")
+        
         elif choice == "2":
             print("\nPalindrome Nuumber Check\n")
             x = input("Please enter a number: ")
-            num_palindrome_check(x)
-            print("\n")
+            
+            try:
+                x = int(x)
+                if (-2**31 > x or x > (2**31)-1):
+                    print("You have entered an invalid number, ensure that input length is is between -2^31 and (2^31 - 1).\n")
+                else:
+                    print((f"{x} is a palindrome.") if num_palindrome_check(x) else (f"{x} is a not a palindrome."))
+                    print("\n")
+            except Exception as e:
+                print("You have entered an invalid number.\n")
+            
         elif choice == "0" or choice == "End" or choice == "end" or choice == "Stop" or choice == "stop":
             break
         else:
