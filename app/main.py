@@ -5,13 +5,14 @@ def main():
     while True:
         print("1. Question 1: Palindrome Check")
         print("2. Question 2: Number Palindrome Check")
-        print("0. Enter end app.")
+        print("0. End app.")
         choice = input("Please enter your choice: ")
     
         if choice == "1":
             print("\nPalindrome Check\n")
             s = input("Please enter a string: ")
-            palindrome_check(s)
+            # print((s + " is a palindrome.") ) if palindrome_check(s) else print(s + " is a not a palindrome.")
+            print((s + " is a palindrome.") if palindrome_check(s) else (s + " is a not a palindrome."))
             print("\n")
         elif choice == "2":
             print("\nPalindrome Nuumber Check\n")
@@ -23,4 +24,5 @@ def main():
         else:
             print("\nYou have entered an invalid choice, please choose again.\n")
         
-main()
+if __name__ == "__main__":
+   main()
