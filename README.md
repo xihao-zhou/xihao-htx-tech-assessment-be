@@ -59,10 +59,12 @@ Ensure you have the following installed:
 
 ```plaintext
 xihao-htx-tech-assessment-be/
-├── app/        
-│   └──main.py          
+├── app/
+│   ├── main.py
+│   ├── num_palindrome_check.py
+│   └── palindrome_check.py
 ├── tests/
-│   └──test.py 
+│   └── test.py 
 ├── requirements.txt
 └── README.md
 ```
