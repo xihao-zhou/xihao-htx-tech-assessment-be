@@ -24,13 +24,10 @@ def main():
             
             try:
                 x = int(x)
-                if (-2**31 > x or x > (2**31)-1):
-                    print("You have entered an invalid number, ensure that input length is is between -2^31 and (2^31 - 1).\n")
-                else:
-                    print((f"{x} is a palindrome.") if num_palindrome_check(x) else (f"{x} is a not a palindrome."))
-                    print("\n")
+                print((f"{x} is a palindrome.") if num_palindrome_check(x) else (f"{x} is a not a palindrome."))
+                print("\n")
             except Exception as e:
-                print("You have entered an invalid number.\n")
+                print(f"You have entered an invalid number. {e}\n")
             
         elif choice == "0" or choice == "End" or choice == "end" or choice == "Stop" or choice == "stop":
             break
