@@ -10,17 +10,16 @@ def main(args):
         
 """
 Funtion to perform palindrome check given input string s
-Step 1: Remove all non-alphanumeric characters from input
-Step 2: Convert input to lower case
-Step 3: Check if trimmed input is a palindrome
+Step 1: Validate input length is between 1 to 2000 chars
+Step 2: Remove all non-alphanumeric characters from input
+Step 3: Convert input to lower case
+Step 4: Perform palindrome check for trimmed input
 Return True if input is palindrome else return False
 """
 def palindrome_check(s):
     
-    is_palindrome = True
-    
     if 1 > len(s) or len(s) > 2000:
-        raise Exception("Ensure that input length is at lease 1 character and no longer then 2000 characters.\n")
+        raise ValueError("Ensure that input length is at lease 1 character and no longer then 2000 characters.")
     else:
         s = ''.join(c for c in s if c.isalnum())
         s = s.lower()
@@ -32,10 +31,9 @@ def palindrome_check(s):
             """
             for i in range((len(s)//2) + 1):
                 if s[i] != s[len(s)-i-1]:
-                    is_palindrome = False
-                    break
+                    return False
         
-    return is_palindrome
+    return True
 
 """Funtion to parse arguments when file is run independtently"""
 def parse_arguments(argv):
