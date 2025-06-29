@@ -12,11 +12,11 @@ def main():
             print("\nPalindrome Check\n")
             s = input("Please enter a string: ")
             
-            if 1 > len(s) or len(s) > 2000:
-                print("You have entered an invalid input, ensure that input length is at lease 1 character and no longer then 2000 characters.\n")
-            else:
+            try:
                 print((f"{s} is a palindrome.") if palindrome_check(s) else (f"{s} is a not a palindrome."))
                 print("\n")
+            except Exception as e:
+                print(f"You have entered an invalid input. {e}\n")
         
         elif choice == "2":
             print("\nPalindrome Nuumber Check\n")
