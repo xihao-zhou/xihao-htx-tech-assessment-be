@@ -19,7 +19,7 @@ It contains two core functionalities:
 
 Ensure you have the following installed:
 
-- Python 3.12+
+- Python 3.10+
 - Git
 
 ## 📦 Setup
@@ -50,6 +50,7 @@ Ensure you have the following installed:
    ```
    
 3. **Install dependencies:**
+   
    **Linux/MacOs**
    ```bash
    pip3 install -r requirements.txt
